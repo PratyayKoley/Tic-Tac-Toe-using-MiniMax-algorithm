@@ -56,7 +56,7 @@ function App() {
 
     try {
       setLoading(true);
-      const response = await fetch(`${API_URL}/games/${gameId}/move`, {
+      const response = await fetch(`${import.meta.env.VITE_API}/games/${gameId}/move`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function App() {
 
     try {
       setLoading(true);
-      const response = await fetch(`${API_URL}/games/${gameId}/reset`, {
+      const response = await fetch(`${import.meta.env.VITE_API}/games/${gameId}/reset`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
